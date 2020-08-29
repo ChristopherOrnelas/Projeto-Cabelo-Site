@@ -1,3 +1,5 @@
+$cor-branca: white;
+
 *{
     padding: 0px;
     margin: 0px;
@@ -15,41 +17,42 @@
     background: linear-gradient(90deg, rgba(75,6,84,0.99) 0%, rgba(96,7,107,1) 83%, rgba(0,0,0,1) 100%);
     width: 100vw;
     height: 80px;
+
+    ul{
+        float: right;
+        margin-right: 20px;
+    }
+
+    li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 10px;
+    }
 }
 
 .logo{
-    color: white;
+    color: $cor-branca;
     font-size: 3rem;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
 }
 
-.nav-bar ul{
-    float: right;
-    margin-right: 20px;
-}
-
-.nav-bar li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 10px;
-}
-
 .nav-links a {
-    color: white;
+    color: $cor-branca;
     text-transform: uppercase;
     font-size: 18px;
     transition: 0.7s ease;
+
+    &:hover{
+        color: aquamarine;
+    }
 }
 
-.nav-links a:hover{
-    color: aquamarine;
-}
 
 .checkbtn {
     font-size: 30px;
-    color: white;
+    color: $cor-branca;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -75,6 +78,7 @@
     .checkbtn{
         display: block;
     }
+
     ul{
         display: flex;
         flex-direction: column;
@@ -92,16 +96,18 @@
 
     .nav-bar ul li{
         display: block;
+
+        a{
+            font-size: 20px;
+
+            &:hover, &:active{
+                background: none;
+                color: aqua;
+            }
+        }        
     }
 
-    .nav-bar ul li a{
-        font-size: 20px;
-    }
-
-    a:hover, a.active{
-        background: none;
-        color: aqua;
-    }
+    
 
     #check:checked ~ ul{
         left: 0;
@@ -138,22 +144,24 @@
 
 .s2 {
     background: linear-gradient(to left top, #cbcbcb, white);
+    
+    h1{
+        font-size: 4.8rem;
+        background: linear-gradient(to left, #303030, #414141);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
-.s2 h1{
-    font-size: 4.8rem;
-    background: linear-gradient(to left, #303030, #414141);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .description {
     margin: 20%;
     width: 30%;
     margin-left: 5%;
-    font-size: 2rem
+    font-size: 2rem;
+
+    p{
+        margin: 50px 0px;
+    }
 }
 
-.description p{
-    margin: 50px 0px;
-}
